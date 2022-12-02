@@ -58,8 +58,9 @@ public class TestBase {
 	
 	
 	public static void teardown() {
-		driver.close();
+		//driver.close();
 		driver.quit();
+		driver = null;
 	}
 	
 	
