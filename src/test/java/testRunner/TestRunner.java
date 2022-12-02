@@ -12,9 +12,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(features ={"src/test/resources/features"}, 
 glue = {"stepDefinations","Hooks"}, 
 monochrome = true, 
-plugin = {"pretty",
+format = {"pretty",
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		"io.qameta.allure.cucumber5jvm.AllureCucumber5Jvm",
+	  	"json:target/cucumber.json",
 		"html:target/JUNITHtmlReports/report.html",
 		"junit:target/JUNITReports/reports.xml"})
 
